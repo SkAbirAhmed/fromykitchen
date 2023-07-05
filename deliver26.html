@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Site</title>
+    <link rel="stylesheet" type="text/css" href="del.css">
+</head>
+<body style="background:url('del28.png') ">
+    <header>
+        <h1>Delivery Site</h1>
+    </header>
+    
+    <main>
+        <section id="order-form">
+            <h2>Deliver an Order</h2>
+            <form id="delivery-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Your Address:</label>
+                <input type="text" id="address" required>
+                <label for="address">Food Item:</label>
+                <input type="text" id="address" required>
+
+                <button type="submit">DELIVER</button>
+            </form>
+        </section>
+
+        <section id="order-list">
+            <h2>Recent Deliveries</h2>
+            <ul id="orders">
+                <!-- Dynamically populated with JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="deliver26.js"></script>
+</body>
+</html>
