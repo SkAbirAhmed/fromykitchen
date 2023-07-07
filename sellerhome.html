@@ -2,6 +2,8 @@
 
 <head>
     <title>From My Kitchen : Seller</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee.css">
     <style>
         * {
             margin: 0px;
@@ -110,7 +112,7 @@
             transform-style: preserve-3d;
         }
 
-        .container .box {
+        .container .boxxi {
             position: relative;
             width: 300px;
             height: 300px;
@@ -120,7 +122,7 @@
             cursor: pointer;
         }
 
-        .container .box .body {
+        .container .boxxi .body {
             position: absolute;
             top: 0;
             left: 0;
@@ -132,7 +134,7 @@
 
 
 
-        .container .box .body .imgContainer {
+        .container .boxxi .body .imgContainer {
             position: absolute;
             top: 0;
             left: 0;
@@ -141,7 +143,7 @@
             transform-style: preserve-3d;
         }
 
-        .container .box .body .imgContainer img {
+        .container .boxxi .body .imgContainer img {
             position: absolute;
             top: 0;
             left: 0;
@@ -150,7 +152,7 @@
             object-fit: cover;
         }
 
-        .container .box .body .content {
+        .container .boxxi .body .content {
             position: absolute;
             top: 0;
             left: 0;
@@ -162,30 +164,56 @@
             transform: rotateY(180deg);
         }
 
-        .container .box:hover .body {
+        .container .boxxi:hover .body {
             transform: rotateY(180deg);
         }
 
-        .container .box .body .content div {
+        .container .boxxi .body .content div {
             transform-style: preserve-3d;
             padding: 20px;
             background: black;
             transform: translateZ(100px);
         }
 
-        .container .box .body .content div h3 {
+        .container .boxxi .body .content div h3 {
             letter-spacing: 1px;
         }
 
         #about-section {
             margin-top: 6rem;
         }
+        .nav-seller{
+            background-color: #000e14;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .seller-login-nav{
+            padding-top: 0.8em;
+            display: inline-flex;
+            padding-bottom: 0.8em;
+            gap: 2rem;
+            margin-right: 3em;
+        }
+        .seller-login-nav li a{
+            
+            text-decoration: none;
+            color: white;
+        }
+       
     </style>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
+    <nav class="nav-seller">
+        <ul class="seller-login-nav">
+            <li><a href="index.html">Home</a></li>
+            <li> <a href="#sellerr">Login/Register</a></li>
+        </ul>
+    </nav>
     <div class="logo">
         <img src="20230702_172710_0000.png" alt="">
     </div>
@@ -204,7 +232,7 @@
 
         <div class="container d-flex align-items-center justify-content-center flex-wrap">
 
-            <div class="box">
+            <div class="boxxi">
                 <div class="body">
                     <div class="imgContainer">
                         <img src="sharing caring.gif" alt="">
@@ -219,7 +247,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box">
+            <div class="boxxi">
                 <div class="body">
                     <div class="imgContainer">
                         <img src="cooking-at-home.gif" alt="">
@@ -233,7 +261,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box">
+            <div class="boxxi">
                 <div class="body">
                     <div class="imgContainer">
                         <img src="money-unscreen.gif" alt="">
@@ -250,7 +278,50 @@
 
         </div>
     </section>
-    <div class="p-5"><a href="loginforseller.html" class="readbtn">Become a Seller</a></div>
+    
+
+
+
+
+    <section id="sellerr">
+        <div class="box">
+            <img src="food.gif">
+            <div class="page">
+                <div class="header">
+                    <a id="login" class="active" href="#login">login</a>
+                    <a id="signup" href="#signup">signup</a>
+                </div>
+                <div id="errorMsg"></div>
+                <div class="content">
+                    <form class="login" name="loginForm" method="POST">
+                        <input type="text" name="name" id="logName" placeholder="Username">
+                        <input type="password" name="password" id="logPassword" placeholder="Password">
+
+                        <br><br>
+                        <button type="button" class="seller-login-button" onclick="validateLoginForm()">Login</button>
+                    </form>
+                    <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" method="POST">
+                        <input type="email" name="email" id="signEmail" placeholder="Email">
+                        <input type="text" name="name" id="signName" placeholder="Username">
+                        <input type="password" name="password" id="signPassword" placeholder="Password"><br>
+                        <input type="submit" value="SignUp">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.FromMyKitchen.com. All rights reserved!
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="loginforseller.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
