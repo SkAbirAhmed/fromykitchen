@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
   if (user) {
     // Redirect to another page
-    window.location.href = 'login2.html';
+    window.location.href = 'order.html';
   } else {
     var loginError = document.getElementById('loginError');
     loginError.textContent = 'Invalid username or password';

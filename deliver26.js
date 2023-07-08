@@ -9,7 +9,7 @@ function populateOrderList() {
 
     orders.forEach(order => {
         const listItem = document.createElement("li");
-        listItem.innerHTML = `<strong>${order.name}</strong>: ${order.address}`;
+        listItem.innerHTML = `<strong>${order.name}</strong>: ${order.youraddress} <strong>To</strong> ${order.deliveryaddress} : ${order.fooditem}`;
         ordersElement.appendChild(listItem);
     });
 }
@@ -19,11 +19,17 @@ function handleFormSubmission(event) {
     event.preventDefault();
 
     const nameInput = document.getElementById("name");
-    const addressInput = document.getElementById("address");
-
+    const fooditemin = document.getElementById("fooditem");
+    const deliveryadd = document.getElementById("deliveryaddress");
+    const youradd = document.getElementById("youraddress");
+    const contact = document.getElementById("contact");
+    
     const order = {
         name: nameInput.value,
-        address: addressInput.value
+        fooditem: fooditemin.value,
+        deliveryaddress: deliveryadd.value,
+        youraddress: youradd.value,
+        contact:contact.value,
     };
 
     orders.push(order);
@@ -31,7 +37,10 @@ function handleFormSubmission(event) {
 
     // Clear the form inputs
     nameInput.value = "";
-    addressInput.value = "";
+    deliveryadd.value = "";
+    fooditemin.value = "";
+    youradd.value = "";
+    contact.value = "";
 }
 
 // Event listener for form submission

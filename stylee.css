@@ -674,3 +674,24 @@ button {
 .buttonwhatever:hover span:nth-child(4 ) {
   bottom: 50%;
 }
+
+.deliver-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deliver-div a{
+  display: inline-flex;
+    text-decoration: none;
+    color: #000000;
+    
+}
+.deliver-div a button{
+   height: 5rem;
+   width: 20rem;
+   color: #000000;
+   background-color: orange;
+   font-weight: 600;
+    text-transform: capitalize;
+    font-size: x-large;
+}
